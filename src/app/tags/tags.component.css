@@ -1,0 +1,12 @@
+svg{
+    position: absolute;
+    bottom: 0;  
+}
+ul{
+    max-width: 450px;
+    text-align: center;
+}
+.cent{
+    display: flex;
+    justify-content: center;
+}

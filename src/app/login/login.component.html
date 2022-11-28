@@ -1,0 +1,22 @@
+<div>
+ <main class="form-signin w-100 m-auto">
+    <form #f="ngForm" (ngSubmit)="signIn(f.value)">
+      <h1 class="h3 mb-3 fw-normal">Musíš se přihlásit!</h1>
+      <p>Pro tvorbu obsahu pro NOTIO je potřeba účet.<br>
+         Vytvořit účet ti může někdo z lokálního IT.</p>
+      <div *ngIf="invalidLogin" class="alert alert-danger">Invalid username and/or password.</div>
+  
+      <div class="form-floating">
+        <input type="email" id="inputEmail" name="email" ngModel class="form-control" placeholder="Josef@husqvarnagroup.com" required>
+        <label for="floatingInput">Email</label>
+      </div>
+
+      <div class="form-floating">
+        <input type="password" class="form-control" id="inputPassword" ngModel name="password" placeholder="Password" required>
+        <label for="floatingPassword">Heslo</label>
+      </div>
+  
+      <button class="w-auto btn btn-lg btn-primary" [disabled]="!f.valid" type="submit">Sign in</button>
+    </form>
+  </main>
+ </div>

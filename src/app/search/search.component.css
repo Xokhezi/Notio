@@ -1,0 +1,41 @@
+button{
+    margin: 3px;    
+}
+div{
+    align-content: center;
+    text-align: center;
+    justify-content: center;    
+}
+input{
+    margin-top: 40px;
+    margin-bottom: 10px;
+    width: 350px;
+}
+.search{    
+    margin: 5px;
+    cursor: pointer;
+}
+.margin-top-posts{
+    margin-top: 40px;
+}
+svg{
+    position:fixed;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+.right{
+    text-align: right;
+    justify-content: right;
+}
+.red
+{
+    color: rgb(231, 67, 67);
+}
+.green{
+    color: rgb(83, 240, 83);
+}
+svg{
+    position: absolute;
+    bottom: 0;  
+}
+

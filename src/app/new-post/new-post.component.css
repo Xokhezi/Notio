@@ -1,0 +1,50 @@
+input{
+    width: 750px;
+    
+}
+textarea{
+    width: 750px;
+    height: 150px;
+}
+button{
+    margin-top: 20px;
+    cursor: pointer;
+}
+.green{
+    color: rgb(66, 162, 66);
+}
+.red{
+    color: red;
+}
+i{
+    cursor: pointer;
+}
+form{
+   
+    background: rgb(160,222,237);
+    background: linear-gradient(90deg, rgba(160,222,237,1) 0%, rgba(211,245,255,1) 100%);
+    box-shadow:  20px 20px 60px #bebebe,
+             -20px -20px 60px #ffffff;
+    border-radius: 15px;
+    padding: 20px;
+    width: 850px;
+    
+}
+.gocent{
+    display: flex;
+    justify-content: center;
+}
+h4{
+    text-align: center;
+}
+svg{
+    position: absolute;
+    bottom: 0;  
+}
+.marg-bot{
+    margin-bottom: 40px;
+}
+.marg{
+    margin: 5px;
+}
+

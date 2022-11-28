@@ -1,0 +1,60 @@
+<div class="gocent">
+    <label>Tagy:</label>
+    <input class="form-control" [(ngModel)]="tag" #entry (keyup.enter)="addTag()" type="text">
+</div>
+
+<div *ngIf="!existingTag" class="alert alert-secondary gocent marg">
+    Tento tag ještě nebyl vytvořen:<br>
+    před založením příspěvku, prosím zkontrolujte, zda se jedná o validní kategorii.
+</div>
+
+<div class="gocent marg-bot">
+    <button class="btn btn-secondary marg" (click)="delete(tag)" *ngFor="let tag of tags">{{tag}}<i
+            class="bi bi-x"></i></button>
+</div>
+
+<div class="gocent test">
+    <form #f="ngForm" (submit)="submit(f.value)">
+        <h4> Nový příspěvek</h4>
+        <div class="form-group">
+            <label for="title">Titul</label>
+            <input class="form-control" [(ngModel)]="title" #tit="ngModel" type="text" name="tit" required minlength="5"
+                id="title ">
+
+            <label for="summary">Souhrn</label>
+            <input class="form-control" [(ngModel)]="summary" #sum="ngModel" type="text" name="sum" required minlength="5"
+                id="summary">
+
+            <label for="text">Text</label>
+            <textarea class="form-control" [(ngModel)]="text" #txt="ngModel" type="text" name="txt" required minlength="5"
+                id="text"></textarea>
+
+            <label for="url">Url</label>
+            <input class="form-control" [(ngModel)]="url" #ul="ngModel" type="text" name="ul" minlength="5" id="url">
+
+            <label for="autor">autor</label>
+            <input class="form-control" [(ngModel)]="autor" #atr="ngModel" type="text" name="atr" minlength="5" id="autor">
+
+        </div>
+
+        <div>
+            <button (click)="lock()" class="btn btn-light">
+                <i class="bi" [class.bi-lock]="!public" [class.red]="!public" [class.bi-unlock]="public"
+                    [class.green]="public">
+                </i>
+                <label *ngIf="!public" class="red">Soukromé</label>
+                <label *ngIf="public" class="green">Veřejné</label>
+
+            </button>
+
+
+
+        </div>
+
+
+        <button class="btn btn-primary" [disabled]="!f.valid">Submit</button>
+        {{f.value|json}}
+
+    </form>
+</div>
+

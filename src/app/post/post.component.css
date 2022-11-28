@@ -1,0 +1,14 @@
+svg{
+    position: absolute;
+    bottom: 0;  
+}
+.red
+{
+    color: rgb(231, 67, 67);
+}
+.green{
+    color: rgb(83, 240, 83);
+}
+button{
+    margin: 5px;
+}
