@@ -7,7 +7,7 @@
         <i *ngIf="post.public" class=" bi bi-unlock green">veřejný</i>
         <i *ngIf="!post.public" class=" bi bi-lock red">soukromý</i>
       <p class="lead my-3">{{post.text}}</p>  
-      <a class="btn btn-primary" href="posts"><i class="bi bi-arrow-left-circle"></i> Zpět k postům</a>    
+      <a class="btn btn-primary" [routerLink]="['/posts']"><i class="bi bi-arrow-left-circle"></i> Zpět k postům</a>    
     </div>
   </div>
   
