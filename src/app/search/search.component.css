@@ -35,7 +35,7 @@ svg{
     color: rgb(83, 240, 83);
 }
 svg{
-    position: absolute;
+    position: fixed;
     bottom: 0;  
 }
 
