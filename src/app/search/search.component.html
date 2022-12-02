@@ -1,6 +1,6 @@
 
 <div>
-<input  [(ngModel)]="field"  #entry (keyup.enter)="addTopic(entry.value)" type="text"><i (click)="search()" class="bi bi-search search"></i>
+<input  [(ngModel)]="field"  #entry (keyup.enter)="addTopic(entry.value)" type="text"><i  (click)="addTopic(entry.value)" class="bi bi-search search"></i>
 <div  *ngIf="!validTag" class="alert alert-light" role="alert">
   Nejedná se o validní tag <i class="bi bi-emoji-frown"></i><br>
   Nemůžeš najít vhodný tag? Mrkni do sekce <a href="tags">tagy</a>!

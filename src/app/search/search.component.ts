@@ -25,6 +25,7 @@ export class SearchComponent implements OnInit {
   }
 
   addTopic(input: string) {    
+    console.log(input);
     let toUp = input.toUpperCase();
     console.log(toUp);
     
@@ -32,10 +33,9 @@ export class SearchComponent implements OnInit {
     {
     this.topics?.push(toUp);
     this.field = ''    
-    }    
-    console.log(this.validTag);
+    }      
     this.search();
-    
+    console.log(input);
 
   }
   delete(topic: any) {
